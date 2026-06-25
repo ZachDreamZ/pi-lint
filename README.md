@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-pi install npm:pi-lint
+pi install npm:@realvendex/pi-lint
 ```
 
 ## What It Does
