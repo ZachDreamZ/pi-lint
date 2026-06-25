@@ -1,0 +1,57 @@
+{
+	"name": "@realvendex/pi-lint",
+	"version": "1.0.0",
+	"description": "Pi-native extension linter that checks for pi-specific API anti-patterns — deterministic, no LLM calls, catches runtime bugs before npm publish",
+	"type": "module",
+	"license": "MIT",
+	"author": "realvendex",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ZachDreamZ/pi-lint"
+	},
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-coding-agent",
+		"lint",
+		"anti-patterns",
+		"extension",
+		"validation"
+	],
+	"files": [
+		"extensions",
+		"skills",
+		"README.md",
+		"LICENSE"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"typecheck": "tsc --noEmit"
+	},
+	"pi": {
+		"extensions": [
+			"./extensions"
+		],
+		"skills": [
+			"./skills"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*",
+		"typebox": "*"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.14",
+		"@earendil-works/pi-coding-agent": "^0.74.0",
+		"typebox": "^1.1.24",
+		"typescript": "^5.0.0",
+		"vitest": "^3.2.1"
+	}
+}
